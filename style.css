@@ -12,19 +12,84 @@ body {
     max-width: 1440px;
 }
 
-.header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #000; /* ou qualquer cor de fundo que você esteja usando */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+.botao-contato {
+    background-color: #0cc0df;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin-bottom: 100px;
 }
 
-.header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.botao-contato:hover {
+    background-color: #ffffff;
+    color: #0cc0df;
+}
+
+.padding_top {
+    padding-top: 50px;
+}
+
+.header img {
+    width: 100px;
+}
+
+.header .navbar {
+    position: relative;
+    height: 80px;            
+}
+
+.header .navbar-toggler {
+    position: absolute;
+    top: 50%;
+    right: 1rem;           
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    border: none;
+}
+
+.header .navbar-toggler-icon {
+    background-size: 24px 24px;
+}
+
+.header .navbar-nav .nav-link {
+    color: #0cc0df !important;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+.header .navbar-nav .nav-link:hover {
+    color: #fff !important;
+    border-bottom: 2px solid #fff;
+}
+
+
+@media (max-width: 768px) {
+    .header .navbar-collapse {
+        background-color: #000 !important; 
+        position: absolute;
+        top: 100%;          
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;   
+        z-index: 999;    
+    }
+
+    .header .navbar-nav .nav-link {
+        color: #0cc0df !important;
+        padding: .5rem 1rem;
+    }
+    .header .navbar-nav .nav-link:hover {
+        color: #fff !important;
+        border-bottom: 2px solid #fff;
+    }
+
+    .header .navbar-brand img {
+        max-height: 60px;     
+        width: auto;
+    }
 }
 
 .logo a {
@@ -74,7 +139,7 @@ body {
 }
 
 .container h1 {
-    padding-top: 200px;
+    padding-top: 250px;
     padding-bottom: 50px;
 
 }
@@ -339,73 +404,91 @@ body {
     font-weight: bold;
 }
 
-.blog__posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 32px;
+.posts {
+    background-color: #000;
+    padding: 60px 20px;
+    color: #fff;
 }
 
-.post {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.post h3 {
-    font-size: 1.2em;
-    padding-bottom: 32px;
+.posts h2 {
+    text-align: center;
     color: #0cc0df;
+    margin-bottom: 40px;
+    font-size: 2em;
 }
 
-.post p {
-    font-size: 1em;
-    padding-bottom: 16px;
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.post pre {
-    background-color: #212121;
-    color: #e0e0e0;
-    padding: 12px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-family: monospace;
+.post-card {
+    background-color: #111;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.post-card__header {
+    margin-bottom: 16px;
+}
+
+.post-card__title {
+    color: #fff;
+    font-size: 1.4em;
+    margin: 0 0 8px;
+}
+
+.post-card__meta {
     font-size: 0.9em;
-    margin-bottom: 12px;
+    color: #888;
 }
 
-.leia-mais {
+.post-card__content p {
+    color: #ccc;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: 16px;
+}
+
+.post-card__read-more {
     color: #0cc0df;
     font-weight: bold;
     text-decoration: none;
 }
 
-.leia-mais:hover {
+.post-card__read-more:hover {
     text-decoration: underline;
 }
 
-.blog__botao {
+.posts__see-all {
+    display: block;
     text-align: center;
-    margin-top: 32px;
-}
-
-.btn-blog {
-    display: inline-block;
-    padding: 8px 24px;
+    margin: 40px auto 0;
+    color: #0cc0df;
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.3s ease;
-    background-color: #0cc0df;
-    border-radius: 10px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 20px;
-    border: none;
 }
 
-.btn-blog:hover {
-    background-color: #ffffff;
-    color: #0cc0df;
+.posts__see-all:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    }
+
+@media (max-width: 576px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .contato {
@@ -430,7 +513,6 @@ body {
     text-align: left;
 }
 
-/* Formulário */
 .form-contato {
     flex: 1 1 350px;
     max-width: 600px;
@@ -597,7 +679,7 @@ body {
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    columns: 3;
+    columns: 4;
     gap: 12px;
     text-align: center;
 }
@@ -621,7 +703,6 @@ body {
     color: #d4faff;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .rodape__conteudo {
         flex-direction: column;
@@ -639,4 +720,51 @@ body {
 
 .rodape__coluna a img {
     width: 250px;
+}
+
+.blog__botao {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.blog__botao .posts__see-all {
+    display: inline-block;
+    background-color: #0cc0df;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+}
+
+.blog__botao .posts__see-all:hover {
+    background-color: #ffffff;
+    color: #0cc0df;
+}
+
+.blog__pagina {
+    background-color: #f9f9f9;
+}
+
+.blog__pagina h2 {
+    font-weight: bold;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.blog__pagina h3 {
+    color: #0cc0df;
+}
+
+pre code {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+    display: block;
+    font-family: monospace;
 }

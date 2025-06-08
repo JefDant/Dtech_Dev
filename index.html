@@ -10,167 +10,191 @@
     <link rel="icon" type="image/png" href="./img/favicon.png">
 </head>
 <body>
-    <header class="header">
-        <div class="container header__container">
-            <div class="logo">
-                <a href="#">
-                    <img src="./img/Logo.png" alt="">
+    <header class="header fixed-top" >
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+            <div class="container d-flex justify-content-between align-items-center logo">
+                <a class="navbar-brand" href="#inicio">
+                    <img src="./img/Logo.png" alt="DTech Developer" class="logo-img" loading="lazy">
                 </a>
-            </div>
-            <div class="nav">
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">Início</a>
-                        </li>
-                        <li>
-                            <a href="#">Sobre Nós</a>
-                        </li>
-                        <li>
-                            <a href="#">Serviços</a>
-                        </li>
-                        <li>
-                            <a href="#">Projetos</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">Contato</a>
-                        </li>
+                <button class="navbar-toggler" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#menuNav"
+                        aria-controls="menuNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#solucoes">Soluções</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                     </ul>
-                </nav>
-                <a href="https://wa.me/5579981314513" class="whatsapp-fixo" target="_blank" aria-label="Fale conosco no WhatsApp">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 448 512" fill="white">
-                        <path d="M380.9 97.1C339 55.2 283.2 32 224.1 32 100.3 32 0 132.3 0 256c0 45 11.7 88.5 33.8 127.1L2.5 480l101.7-30.9c35 19.2 74.2 29.4 119.9 29.4 123.7 0 224-100.3 224-224 0-59.1-23.2-114.9-65.2-156.9zM224.1 438c-38.4 0-76.3-10.4-109.1-30l-7.8-4.6-60.5 18.4 19.4-59.2-5.1-8.1c-20.2-31.8-30.9-68.2-30.9-106.4 0-105.9 86.1-192 192-192 51.3 0 99.5 20 135.9 56.1S416 204.7 416 256c0 105.9-86.1 182-191.9 182zm101.1-138.2c-5.5-2.8-32.6-16.1-37.6-17.9-5-1.9-8.7-2.8-12.5 2.8-3.7 5.5-14.4 17.9-17.6 21.6-3.2 3.7-6.5 4.2-12 1.4s-23.4-8.6-44.6-27.5c-16.5-14.7-27.6-32.9-30.9-38.4s-.3-8.6 2.4-11.4c2.4-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.2-41.4-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5 5.5-19.6 19.1-19.6 46.6s20.1 54.1 22.9 57.8c2.8 3.7 39.4 60.2 95.5 84.4 13.3 5.7 23.6 9.1 31.7 11.7 13.3 4.2 25.5 3.6 35.1 2.2 10.7-1.6 32.6-13.3 37.2-26.2 4.6-12.9 4.6-23.9 3.2-26.2-1.2-2.2-5-3.6-10.5-6.4z"/>
-                    </svg>
-                </a>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
-    <section class="capa">
+    <section class="capa" id="inicio">
         <div class="container">
             <h1>Transformamos problemas em <br>soluções digitais inteligentes.</h1>
-            <button>Entre em contato</button>
+            <a href="https://wa.me/5579981314513" target="_blank" class="botao-contato">Entre em contato</a>
         </div>
     </section>
     <section class="tecnologias">
         <div class="slider">
             <div class="slide-track">
-                <div class="slide"><img src="./img/tecnologia/Python-Symbol.png" alt="Python"></div>
-                <div class="slide"><img src="./img/tecnologia/HTML5_logo_and_wordmark.svg-removebg-preview.png" alt="HTML"></div>
-                <div class="slide"><img src="./img/tecnologia/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg" alt="CSS"></div>
-                <div class="slide"><img src="./img/tecnologia/javascript.png" alt="JavaScript"></div>
-                <div class="slide"><img src="./img/tecnologia/git.png" alt="Git"></div>
-                <div class="slide"><img src="./img/tecnologia/Github-desktop-logo-symbol.svg.png" alt="GitHub"></div>
-                <div class="slide"><img src="./img/tecnologia/317889.png" alt="SASS"></div>
-                <div class="slide"><img src="./img/tecnologia/Gulp.js_Logo.svg.png" alt="Gulp"></div>
-                <div class="slide"><img src="./img/tecnologia/react-js-1.svg" alt="React"></div>
-                <div class="slide"><img src="./img/tecnologia/Vue.js_Logo_2.svg.png" alt="Vue"></div>
-                <div class="slide"><img src="./img/tecnologia/0_rmv6pZTW2hfP2XYd.png" alt="Docker"></div>
-                <div class="slide"><img src="./img/tecnologia/logoimage.png" alt="SQL"></div>
-                <div class="slide"><img src="./img/tecnologia/Google_Apps_Script.svg.png" alt="Google App Script"></div>
-                <div class="slide"><img src="./img/tecnologia/Microsoft_Excel_2013-2019_logo.svg.png" alt="Excel"></div>
-                <div class="slide"><img src="./img/tecnologia/68747470733a2f2f6c6f676f732d776f726c642e6e65742f77702d636f6e74656e742f75706c6f6164732f323032322f30322f4d6963726f736f66742d506f7765722d42492d53796d626f6c2e706e67.png" alt="PowerBI"></div>
-                <div class="slide"><img src="./img/tecnologia/Python-Symbol.png" alt="Python"></div>
-                <div class="slide"><img src="./img/tecnologia/HTML5_logo_and_wordmark.svg-removebg-preview.png" alt="HTML"></div>
-                <div class="slide"><img src="./img/tecnologia/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg" alt="CSS"></div>
-                <div class="slide"><img src="./img/tecnologia/javascript.png" alt="JavaScript"></div>
-                <div class="slide"><img src="./img/tecnologia/git.png" alt="Git"></div>
-                <div class="slide"><img src="./img/tecnologia/Github-desktop-logo-symbol.svg.png" alt="GitHub"></div>
-                <div class="slide"><img src="./img/tecnologia/317889.png" alt="SASS"></div>
-                <div class="slide"><img src="./img/tecnologia/Gulp.js_Logo.svg.png" alt="Gulp"></div>
-                <div class="slide"><img src="./img/tecnologia/react-js-1.svg" alt="React"></div>
-                <div class="slide"><img src="./img/tecnologia/Vue.js_Logo_2.svg.png" alt="Vue"></div>
-                <div class="slide"><img src="./img/tecnologia/0_rmv6pZTW2hfP2XYd.png" alt="Docker"></div>
-                <div class="slide"><img src="./img/tecnologia/logoimage.png" alt="SQL"></div>
-                <div class="slide"><img src="./img/tecnologia/Google_Apps_Script.svg.png" alt="Google App Script"></div>
-                <div class="slide"><img src="./img/tecnologia/Microsoft_Excel_2013-2019_logo.svg.png" alt="Excel"></div>
-                <div class="slide"><img src="./img/tecnologia/68747470733a2f2f6c6f676f732d776f726c642e6e65742f77702d636f6e74656e742f75706c6f6164732f323032322f30322f4d6963726f736f66742d506f7765722d42492d53796d626f6c2e706e67.png" alt="PowerBI"></div>
+                <div class="slide"><img src="./img/tecnologia/Python-Symbol.png" alt="Python" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/HTML5_logo_and_wordmark.svg-removebg-preview.png" alt="HTML" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg" alt="CSS" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/javascript.png" alt="JavaScript" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Bootstrap_logo.svg.png" alt="Bootstrap" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/git.png" alt="Git" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Github-desktop-logo-symbol.svg.png" alt="GitHub" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/317889.png" alt="SASS" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Gulp.js_Logo.svg.png" alt="Gulp" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/react-js-1.svg" alt="React" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Vue.js_Logo_2.svg.png" alt="Vue" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/0_rmv6pZTW2hfP2XYd.png" alt="Docker" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/logoimage.png" alt="SQL" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Google_Apps_Script.svg.png" alt="Google App Script" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Microsoft_Excel_2013-2019_logo.svg.png" alt="Excel" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/68747470733a2f2f6c6f676f732d776f726c642e6e65742f77702d636f6e74656e742f75706c6f6164732f323032322f30322f4d6963726f736f66742d506f7765722d42492d53796d626f6c2e706e67.png" alt="PowerBI" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Python-Symbol.png" alt="Python" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/HTML5_logo_and_wordmark.svg-removebg-preview.png" alt="HTML" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/css-fcba6b473cb1125595dc28163be24eb673907258b5f6f6c82967a0587a9df20c.svg" alt="CSS" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/javascript.png" alt="JavaScript" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Bootstrap_logo.svg.png" alt="Bootstrap" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/git.png" alt="Git" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Github-desktop-logo-symbol.svg.png" alt="GitHub" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/317889.png" alt="SASS" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Gulp.js_Logo.svg.png" alt="Gulp" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/react-js-1.svg" alt="React" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Vue.js_Logo_2.svg.png" alt="Vue" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/0_rmv6pZTW2hfP2XYd.png" alt="Docker" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/logoimage.png" alt="SQL" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Google_Apps_Script.svg.png" alt="Google App Script" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/Microsoft_Excel_2013-2019_logo.svg.png" alt="Excel" loading="lazy"></div>
+                <div class="slide"><img src="./img/tecnologia/68747470733a2f2f6c6f676f732d776f726c642e6e65742f77702d636f6e74656e742f75706c6f6164732f323032322f30322f4d6963726f736f66742d506f7765722d42492d53796d626f6c2e706e67.png" alt="PowerBI" loading="lazy"></div>
             </div>
         </div>
     </section>
-    <section class="sobre">
-        <div class="container">
+    <section class="sobre" id="sobre">
+        <div class="container padding_top">
             <div class="sobre__content">
             <div class="sobre__texto">
                 <h2>Sobre a DTech</h2>
                 <p class="missao">
-                A DTech Developer existe para transformar ideias em soluções digitais práticas, acessíveis e eficientes. Atuamos com foco em automação, desenvolvimento web e análise de dados para impulsionar empresas de todos os portes.
+                <strong>A DTech Developer nasceu para transformar ideias em soluções digitais inteligentes, práticas e acessíveis.</strong> Atuamos com foco em <strong>automação, desenvolvimento web e análise de dados</strong>, oferecendo ferramentas que otimizam processos e impulsionam negócios de todos os tamanhos.
                 </p>
                 <p class="fundador">
-                Fundada por <strong>José Jeferson</strong>, desenvolvedor apaixonado por tecnologia e inovação, a DTech nasceu com a missão de simplificar processos e resolver problemas reais por meio do código.
+                Fundada por <strong>José Jeferson</strong>, desenvolvedor movido pela paixão por tecnologia e inovação, a DTech tem como missão <strong>simplificar rotinas e resolver problemas reais por meio do código</strong>, tornando a tecnologia uma aliada estratégica para o crescimento das empresas.
                 </p>
             </div>
             <div class="sobre__imagem">
-                <img src="./img/sobre.jpg" alt="Fundador da DTech Developer" />
+                <img src="./img/sobre.jpg" alt="Fundador da DTech Developer" loading="lazy" />
             </div>
             </div>
         </div>
     </section>
-    <section class="solucoes">
-        <div class="container">
+    <section class="solucoes" id="solucoes">
+        <div class="container padding_top">
             <h2>Nossas Soluções</h2>
             <div class="solucoes__grid">
-
             <div class="solucao__item">
                 <i class="bi bi-code-slash"></i>
                 <h3>Desenvolvimento Web</h3>
                 <p>Sites institucionais, sistemas sob medida, APIs e integrações.</p>
             </div>
-
             <div class="solucao__item">
                 <i class="bi bi-gear"></i>
                 <h3>Automação</h3>
                 <p>Google Sheets, Excel com VBA, scripts em Python, Apps Script.</p>
             </div>
-
             <div class="solucao__item">
                 <i class="bi bi-bar-chart-line"></i>
                 <h3>Dashboards & BI</h3>
                 <p>Power BI com dados de planilhas, Google Forms, banco de dados.</p>
             </div>
-
             <div class="solucao__item">
                 <i class="bi bi-chat-dots"></i>
                 <h3>Consultoria</h3>
                 <p>Diagnóstico técnico, orientação de ferramentas, mapeamento de processos.</p>
             </div>
-
             </div>
         </div>
     </section>
-    <section class="blog">
-        <div class="container">
+    <section class="blog posts" id="blog">
+        <div class="container padding_top">
             <h2>Blog Técnico</h2>
-            <div class="blog__posts">
-
-            <article class="post">
-                <h3>Como automatizei um processo com Apps Script</h3>
-                <p>Veja como usei Google Apps Script para automatizar uma planilha de atendimento em tempo real:</p>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </article>
-
-            <article class="post">
-                <h3>Power BI: 3 casos reais que você pode aplicar hoje</h3>
-                <p>Transformei planilhas de clientes em dashboards dinâmicos usando filtros e segmentações visuais. Veja um exemplo:</p>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </article>
-
-            <article class="post">
-                <h3>Melhores práticas ao criar sistemas simples para pequenas empresas</h3>
-                <p>Descubra como estrutura modular, UI leve e automação podem tornar seu sistema funcional e escalável.</p>
-                <a href="#" class="leia-mais">Leia mais →</a>
-            </article>
-
+            <div class="blog__posts posts-grid">
+                <article class="post-card">
+                <header class="post-card__header">
+                    <h3 class="post-card__title">SASS</h3>
+                    <div class="post-card__meta">
+                    <time datetime="2025-06-08">15 de fevereiro de 2025</time>
+                    <span>por José Jeferson</span>
+                    </div>
+                </header>
+                <div class="post-card__content">
+                    <p>Sass (Syntactically Awesome Style Sheets) é uma linguagem de extensão para CSS que adiciona recursos avançados variáveis...</p>
+                </div>
+                <footer class="post-card__footer">
+                    <a href="./artigos/art-sass-como-css.html" class="post-card__read-more">Leia mais →</a>
+                </footer>
+                </article>
+                <article class="post-card">
+                <header class="post-card__header">
+                    <h3 class="post-card__title">Git para Iniciantes</h3>
+                    <div class="post-card__meta">
+                    <time datetime="2025-06-08">21 de setembro de 2024</time>
+                    <span>por José Jeferson</span>
+                    </div>
+                </header>
+                <div class="post-card__content">
+                    <p>O Git é o sistema de controle de versão mais utilizado no mundo do desenvolvimento de software. Com ele, você consegue...</p>
+                </div>
+                <footer class="post-card__footer">
+                    <a href="./artigos/art-git-para-iniciantes.html" class="post-card__read-more">Leia mais →</a>
+                </footer>
+                </article>
+                <article class="post-card">
+                <header class="post-card__header">
+                    <h3 class="post-card__title">HTML5 Sem Mistério</h3>
+                    <div class="post-card__meta">
+                    <time datetime="2025-06-08">6 de julho de 2024</time>
+                    <span>por José Jeferson</span>
+                    </div>
+                </header>
+                <div class="post-card__content">
+                    <p>A evolução do HTML5 trouxe consigo uma infinidade de recursos semânticos e multimídia que tornam a construção...</p>
+                </div>
+                <footer class="post-card__footer">
+                    <a href="./artigos/art-html5-sem-misterio.html" class="post-card__read-more">Leia mais →</a>
+                </footer>
+                </article>
+                <article class="post-card">
+                <header class="post-card__header">
+                    <h3 class="post-card__title">Web Scraping com Python</h3>
+                    <div class="post-card__meta">
+                    <time datetime="2025-06-08">8 de maio de 2024</time>
+                    <span>por José Jeferson</span>
+                    </div>
+                </header>
+                <div class="post-card__content">
+                    <p>Web scraping é o processo de extrair dados de páginas web de forma automatizada, transformando conteúdo HTML...</p>
+                </div>
+                <footer class="post-card__footer">
+                    <a href="./artigos/art-web-scraping.html" class="post-card__read-more">Leia mais →</a>
+                </footer>
+                </article>
             </div>
             <div class="blog__botao">
-                <a href="/blog.html" class="btn-blog">Ver todos os artigos</a>
+                <a href="./blog.html" class="posts__see-all">Ver todos os artigos</a>
             </div>
         </div>
     </section>
     <section class="contato" id="contato">
-        <div class="container">
+        <div class="container padding_top">
             <h2>Entre em Contato</h2>
             <div class="contato__grid">
                 <form action="https://formspree.io/f/xovwjzgq" method="POST" class="form-contato">
@@ -189,7 +213,7 @@
                     <label for="mensagem">Mensagem</label>
                     <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
                     <button type="submit">Enviar</button>
-                    <p class="status-envio" id="statusEnvio"></p>
+                    <p class="status-envio" id="msgStatus"></p>
                 </form>
                 <div class="contato-info">
                     <h3>Informações da Empresa</h3>
@@ -213,8 +237,8 @@
     <footer class="rodape">
         <div class="container rodape__conteudo">
             <div class="logo rodape__coluna">
-                <a href="#">
-                    <img src="./img/Logo.png" alt="DTech Developer"  class="rodape__logo">
+                <a href="#inicio">
+                    <img src="./img/Logo.png" alt="DTech Developer"  class="rodape__logo" loading="lazy">
                 </a>
             </div>
             <div class="rodape__coluna">
@@ -243,8 +267,46 @@
         <div class="rodape__copy">
             <p>&copy; 2025 DTech Developer. Todos os direitos reservados.</p>
         </div>
+        <a href="https://wa.me/5579981314513"
+            class="whatsapp-fixo"
+            target="_blank"
+            aria-label="Fale conosco no WhatsApp">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                width="32" height="32"
+                fill="white">
+                <path d="M380.9 97.1C339 55.2 283.2 32 224.1 32
+                        100.3 32 0 132.3 0 256c0 45 11.7 88.5
+                        33.8 127.1L2.5 480l101.7-30.9c35 19.2
+                        74.2 29.4 119.9 29.4 123.7 0 224-100.3
+                        224-224 0-59.1-23.2-114.9-65.2-156.9zM224.1
+                        438c-38.4 0-76.3-10.4-109.1-30l-7.8-4.6
+                        -60.5 18.4 19.4-59.2-5.1-8.1c-20.2-31.8
+                        -30.9-68.2-30.9-106.4 0-105.9 86.1-192
+                        192-192 51.3 0 99.5 20 135.9 56.1s56.1
+                        84.6 56.1 136.9c0 105.9-86.1 182-191.9
+                        182zm101.1-138.2c-5.5-2.8-32.6-16.1
+                        -37.6-17.9-5-1.9-8.7-2.8-12.5 2.8
+                        -3.7 5.5-14.4 17.9-17.6 21.6-3.2
+                        3.7-6.5 4.2-12 1.4s-23.4-8.6
+                        -44.6-27.5c-16.5-14.7-27.6-32.9
+                        -30.9-38.4s-.3-8.6 2.4-11.4c2.4-2.4
+                        5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5
+                        5.5-9.2 1.9-3.7.9-6.9-.5-9.7
+                        -1.4-2.8-12.5-30.1-17.2-41.4
+                        -4.5-10.8-9.1-9.3-12.5-9.5
+                        -3.2-.2-6.9-.2-10.6-.2s-9.7
+                        1.4-14.8 6.9c-5 5.5-19.6 19.1
+                        -19.6 46.6s20.1 54.1 22.9 57.8
+                        c2.8 3.7 39.4 60.2 95.5 84.4
+                        13.3 5.7 23.6 9.1 31.7 11.7
+                        13.3 4.2 25.5 3.6 35.1 2.2
+                        10.7-1.6 32.6-13.3 37.2-26.2
+                        4.6-12.9 4.6-23.9 3.2-26.2
+                        -1.2-2.2-5-3.6-10.5-6.4z"/>
+            </svg>
+        </a>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

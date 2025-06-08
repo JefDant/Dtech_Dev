@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Git para Iniciantes: Do Clone ao Pull Request – Blog Técnico</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" type="image/png" href="../img/favicon.png" />
+    </head>
+    <body>
+        <header class="header fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+                <div class="container d-flex justify-content-between align-items-center logo">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../img/Logo.png" alt="DTech Developer" class="logo-img" loading="lazy" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menuNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="../index.html#inicio">Início</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#sobre">Sobre Nós</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#solucoes">Soluções</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#contato">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="posts blog__pagina" style="padding-top: 100px;">
+            <div class="container padding_top">
+                <h2>Git para Iniciantes: Do Clone ao Pull Request</h2>
+                <article class="post-full mt-4">
+                    <header class="post-card__header mb-3">
+                        <div class="post-card__meta">
+                            <time datetime="2025-06-08">21 de setembro de 2024</time> • <span>por José Jeferson</span>
+                        </div>
+                    </header>
+                    <div class="post-full__content text-dark">
+
+                        <section>
+                            <h3>Introdução</h3>
+                            <p>
+                                O Git é o sistema de controle de versão mais utilizado no mundo do desenvolvimento de software.
+                                Com ele, você consegue acompanhar mudanças, colaborar com outras pessoas e manter seu código organizado.
+                                Neste artigo, vamos dar os primeiros passos: desde clonar um repositório até abrir seu primeiro Pull Request.
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>1. Configuração Inicial</h3>
+                            <p>Antes de começar, configure seu nome de usuário e e-mail:</p>
+                            <pre><code>
+git config --global user.name "Seu Nome"
+git config --global user.email "seu.email@exemplo.com"
+                            </code></pre>
+                            <p>Verifique se ficou tudo certo:</p>
+                            <pre><code>
+git config --list
+                            </code></pre>
+                        </section>
+
+                        <section>
+                            <h3>2. Clonando um Repositório</h3>
+                            <p>Para trabalhar em um projeto já existente, você precisa cloná-lo:</p>
+                            <pre><code>
+git clone https://github.com/usuario/repositorio.git
+                            </code></pre>
+                            <p>O comando acima cria uma pasta <code>repositorio</code> com todo o histórico do projeto.</p>
+                        </section>
+
+                        <section>
+                            <h3>3. Fluxo Básico de Trabalho</h3>
+                            <ol>
+                                <li>
+                                    <strong>Verifique o estado atual:</strong>
+                                    <pre><code>
+git status
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <strong>Adicione alterações:</strong>
+                                    <pre><code>
+git add arquivo1.txt pasta/arquivo2.js
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <strong>Faça um commit:</strong>
+                                    <pre><code>
+git commit -m "Minha mensagem de commit"
+                                    </code></pre>
+                                </li>
+                                <li>
+                                    <strong>Envie para o servidor remoto:</strong>
+                                    <pre><code>
+git push origin main
+                                    </code></pre>
+                                </li>
+                            </ol>
+                        </section>
+
+                        <section>
+                            <h3>4. Mantendo-se Atualizado (Pull)</h3>
+                            <p>Antes de enviar suas alterações, é recomendável atualizar sua cópia local:</p>
+                            <pre><code>
+git pull origin main
+                            </code></pre>
+                        </section>
+
+                        <section>
+                            <h3>5. Trabalhando com Branches</h3>
+                            <p>Branches permitem que você desenvolva funcionalidades isoladas:</p>
+                            <pre><code>
+git checkout -b nova-feature
+                            </code></pre>
+                            <p>Depois de concluir:</p>
+                            <pre><code>
+git add .
+git commit -m "Implementa nova feature"
+git push origin nova-feature
+                            </code></pre>
+                        </section>
+
+                        <section>
+                            <h3>6. Pull Request</h3>
+                            <p>
+                                Um Pull Request (PR) é a forma de propor mudanças a um projeto:
+                            </p>
+                            <ol>
+                                <li>No GitHub/GitLab/Bitbucket, navegue até o seu branch.</li>
+                                <li>Clique em “Compare &amp; pull request” (ou equivalente).</li>
+                                <li>Preencha título e descrição, explicando o que você fez.</li>
+                                <li>Envie o PR e aguarde revisão.</li>
+                            </ol>
+                            <p>
+                                Após aprovação, sua branch será mesclada ao <code>main</code> (ou outro branch alvo).
+                            </p>
+                        </section>
+
+                        <section>
+                            <h3>Conclusão</h3>
+                            <p>
+                                Agora você já sabe o fluxo básico: configurar, clonar, criar branches,
+                                commitar, puxar mudanças e abrir Pull Requests. Com a prática,
+                                Git se tornará uma ferramenta indispensável no seu dia a dia de desenvolvedor.
+                            </p>
+                            <p>
+                                Para se aprofundar, explore <a href="https://git-scm.com/book/pt-br/v2">o livro oficial do Git</a>
+                                e as documentações das plataformas de hospedagem.
+                            </p>
+                        </section>
+
+                    </div>
+                    <footer class="post-full__footer mt-4">
+                        <a href="../blog.html" class="posts__see-all">← Voltar ao blog</a>
+                    </footer>
+                </article>
+            </div>
+        </main>
+
+        <footer class="rodape">
+        <div class="container rodape__conteudo">
+            <div class="logo rodape__coluna">
+            <a href="../index.html"
+                ><img
+                src="../img/Logo.png"
+                alt="DTech Developer"
+                class="rodape__logo"
+                loading="lazy"
+                />
+            </a>
+            </div>
+            <div class="rodape__coluna">
+            <h4>Tecnologias que utilizamos</h4>
+            <ul class="tecnologias-utilizadas">
+                <li>Python</li><li>HTML5</li><li>CSS</li><li>JavaScript</li>
+                <li>Git & GitHub</li><li>SASS & Gulp</li><li>React & Vue</li><li>Docker</li>
+                <li>SQL</li><li>Apps Script</li><li>Excel</li><li>Power BI</li>
+            </ul>
+            </div>
+            <div class="rodape__coluna">
+            <h4>&nbsp;</h4>
+            </div>
+        </div>
+        <div class="rodape__copy">
+            <p>&copy; 2025 DTech Developer. Todos os direitos reservados.</p>
+        </div>
+        <a
+            href="https://wa.me/5579981314513"
+            class="whatsapp-fixo"
+            target="_blank"
+            aria-label="Fale conosco no WhatsApp"
+        >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="32"
+            height="32"
+            fill="white"
+            >
+            <path
+                d="M380.9 97.1C339 55.2 283.2 32 224.1 32 100.3 32 0 132.3 0 256c0 45 11.7 88.5 33.8 127.1L2.5 480l101.7-30.9c35 19.2 74.2 29.4 119.9 29.4 123.7 0 224-100.3 224-224 0-59.1-23.2-114.9-65.2-156.9zM224.1 438c-38.4 0-76.3-10.4-109.1-30l-7.8-4.6-60.5 18.4 19.4-59.2-5.1-8.1c-20.2-31.8-30.9-68.2-30.9-106.4 0-105.9 86.1-192 192-192 51.3 0 99.5 20 135.9 56.1S416 204.7 416 256c0 105.9-86.1 182-191.9 182zm101.1-138.2c-5.5-2.8-32.6-16.1-37.6-17.9-5-1.9-8.7-2.8-12.5 2.8-3.7 5.5-14.4 17.9-17.6 21.6-3.2 3.7-6.5 4.2-12 1.4s-23.4-8.6-44.6-27.5c-16.5-14.7-27.6-32.9-30.9-38.4s-.3-8.6 2.4-11.4c2.4-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.2-41.4-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5 5.5-19.6 19.1-19.6 46.6s20.1 54.1 22.9 57.8c2.8 3.7 39.4 60.2 95.5 84.4 13.3 5.7 23.6 9.1 31.7 11.7 13.3 4.2 25.5 3.6 35.1 2.2 10.7-1.6 32.6-13.3 37.2-26.2 4.6-12.9 4.6-23.9 3.2-26.2-1.2-2.2-5-3.6-10.5-6.4z"
+            />
+            </svg>
+        </a>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

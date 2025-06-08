@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>HTML5 Sem Mistério: 10 Tags que Você Precisa Dominar – Blog Técnico</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" type="image/png" href="../img/favicon.png" />
+    </head>
+    <body>
+        <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+            <div class="container d-flex justify-content-between align-items-center logo">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/Logo.png" alt="DTech Developer" class="logo-img" loading="lazy" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#sobre">Sobre Nós</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#solucoes">Soluções</a></li>
+                <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="../index.html#contato">Contato</a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        </header>
+
+        <main class="posts blog__pagina" style="padding-top: 100px;">
+        <div class="container padding_top">
+            <h2>HTML5 Sem Mistério: 10 Tags que Você Precisa Dominar</h2>
+            <article class="post-full mt-4">
+            <header class="post-card__header mb-3">
+                <div class="post-card__meta">
+                <time datetime="2025-06-08">6 de julho de 2024</time> • <span>por José Jeferson</span>
+                </div>
+            </header>
+            <div class="post-full__content text-dark">
+                <p>A evolução do HTML5 trouxe consigo uma infinidade de recursos semânticos e multimídia que tornam a construção de páginas mais acessível, organizada e poderosa. Se você quer criar sites modernos, com boa indexação por buscadores e melhor experiência para usuários, é fundamental dominar essas tags essenciais. Abaixo, confira uma seleção de 10 elementos que todo desenvolvedor front-end deve conhecer de cor e salteado.</p>
+
+                <h3>1. <code>&lt;header&gt;</code></h3>
+                <p>O elemento <code>&lt;header&gt;</code> representa o cabeçalho de uma página ou seção. Geralmente abriga logotipos, títulos, slogans e navegação principal.</p>
+                <pre><code>
+&lt;header&gt;
+    &lt;img src="logo.png" alt="Logo da Empresa"&gt;
+    &lt;h1&gt;Minha Empresa&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;!-- menu principal --&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+                </code></pre>
+                <ul>
+                <li>Melhora a semântica e a acessibilidade.</li>
+                <li>Facilita a localização de conteúdos de cabeçalho para ferramentas e motores de busca.</li>
+                </ul>
+
+                <h3>2. <code>&lt;nav&gt;</code></h3>
+                <p>A tag <code>&lt;nav&gt;</code> delimita um bloco de links de navegação. Utilize-a sempre que apresentar menus ou índices de conteúdo.</p>
+                <pre><code>
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#servicos"&gt;Serviços&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                </code></pre>
+                <ul>
+                <li>Destaca áreas de navegação para leitores de tela.</li>
+                <li>Melhora a experiência de usuário ao estruturar menus de forma clara.</li>
+                </ul>
+
+                <h3>3. <code>&lt;main&gt;</code></h3>
+                <p>O <code>&lt;main&gt;</code> envolve o conteúdo principal da página, único em cada documento. Ele não deve conter cabeçalhos, rodapés ou barras laterais.</p>
+                <pre><code>
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;!-- conteúdo central do artigo --&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+                </code></pre>
+                <ul>
+                <li>Facilita a navegação interna (p.ex., “pular para o conteúdo principal”).</li>
+                <li>Aumenta a relevância do conteúdo dentro de buscas e índices.</li>
+                </ul>
+
+                <h3>4. <code>&lt;section&gt;</code></h3>
+                <p>Use <code>&lt;section&gt;</code> para agrupar conteúdos tematicamente relacionados, como capítulos, etapas de um tutorial ou diferentes blocos de informação.</p>
+                <pre><code>
+&lt;section id="beneficios"&gt;
+    &lt;h2&gt;Benefícios do HTML5&lt;/h2&gt;
+    &lt;p&gt;...&lt;/p&gt;
+&lt;/section&gt;
+                </code></pre>
+                <ul>
+                <li>Delimita áreas de conteúdo distintas.</li>
+                <li>Permite vincular (via âncoras) diretamente cada seção.</li>
+                </ul>
+
+                <h3>5. <code>&lt;article&gt;</code></h3>
+                <p>O <code>&lt;article&gt;</code> serve para blocos que podem ser distribuídos fora do contexto, como posts de blog, notícias ou widgets independentes.</p>
+                <pre><code>
+&lt;article&gt;
+    &lt;h2&gt;5 Dicas para SEO&lt;/h2&gt;
+    &lt;p&gt;...&lt;/p&gt;
+&lt;/article&gt;
+                </code></pre>
+                <ul>
+                <li>Indica conteúdo autocontido, útil para feeds e compartilhamentos.</li>
+                <li>Otimiza a indexação de cada artigo separadamente.</li>
+                </ul>
+
+                <h3>6. <code>&lt;aside&gt;</code></h3>
+                <p>O <code>&lt;aside&gt;</code> é perfeito para conteúdo complementar: barras laterais, links relacionados ou anúncios que não fazem parte do fluxo principal.</p>
+                <pre><code>
+&lt;aside&gt;
+    &lt;h3&gt;Artigos Relacionados&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Como usar &lt;figure&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/aside&gt;
+                </code></pre>
+                <ul>
+                <li>Separa informações auxiliares.</li>
+                <li>Ajuda leitores de tela a entenderem o que é secundário.</li>
+                </ul>
+
+                <h3>7. <code>&lt;footer&gt;</code></h3>
+                <p>O <code>&lt;footer&gt;</code> agrupa informações de rodapé de uma página ou seção: direitos autorais, links de política, contatos e créditos.</p>
+                <pre><code>
+&lt;footer&gt;
+    &lt;p&gt;© 2025 Minha Empresa. Todos os direitos reservados.&lt;/p&gt;
+    &lt;a href="/privacidade"&gt;Política de Privacidade&lt;/a&gt;
+&lt;/footer&gt;
+                </code></pre>
+                <ul>
+                <li>Padroniza a apresentação de informações finais.</li>
+                <li>Facilita a manutenção e o design responsivo.</li>
+                </ul>
+
+                <h3>8. <code>&lt;figure&gt;</code> e <code>&lt;figcaption&gt;</code></h3>
+                <p>Para imagens e diagramas com legendas, use <code>&lt;figure&gt;</code> envolvendo <code>&lt;img&gt;</code> e <code>&lt;figcaption&gt;</code>.</p>
+                <pre><code>
+&lt;figure&gt;
+    &lt;img src="diagrama-html5.png" alt="Diagrama de estrutura HTML5"&gt;
+    &lt;figcaption&gt;Figura 1: Estrutura semântica básica do HTML5.&lt;/figcaption&gt;
+&lt;/figure&gt;
+                </code></pre>
+                <ul>
+                <li>Mantém imagem e legenda conectados.</li>
+                <li>Melhora a compreensão de gráficos e fotos.</li>
+                </ul>
+
+                <h3>9. <code>&lt;picture&gt;</code></h3>
+                <p>O <code>&lt;picture&gt;</code> permite oferecer imagens responsivas e art-directions, mudando o <code>src</code> conforme a tela ou formato do navegador.</p>
+                <pre><code>
+&lt;picture&gt;
+    &lt;source media="(max-width: 600px)" srcset="imagem-pequena.jpg"&gt;
+    &lt;source media="(min-width: 601px)" srcset="imagem-grande.jpg"&gt;
+    &lt;img src="imagem-grande.jpg" alt="Exemplo responsivo"&gt;
+&lt;/picture&gt;
+                </code></pre>
+                <ul>
+                <li>Otima performance carregando imagens adequadas ao dispositivo.</li>
+                <li>Garante melhor experiência em alta e baixa resolução.</li>
+                </ul>
+
+                <h3>10. <code>&lt;template&gt;</code></h3>
+                <p>O <code>&lt;template&gt;</code> define trechos de HTML inativos que podem ser clonados dinamicamente via JavaScript.</p>
+                <pre><code>
+&lt;template id="cartao-produto"&gt;
+    &lt;div class="produto"&gt;
+        &lt;h3 class="nome"&gt;&lt;/h3&gt;
+        &lt;p class="preco"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+    const dados = { nome: 'Camiseta', preco: 'R$ 49,90' };
+    const tlp = document.querySelector('#cartao-produto');
+    const clone = tlp.content.cloneNode(true);
+    clone.querySelector('.nome').textContent = dados.nome;
+    clone.querySelector('.preco').textContent = dados.preco;
+    document.body.appendChild(clone);
+&lt;/script&gt;
+                </code></pre>
+
+                <h3>Conclusão</h3>
+                <p>Dominar essas 10 tags semânticas e multimídia do HTML5 não só deixa seu código mais limpo e acessível, mas também potencializa a performance e SEO do seu site. Ao adotar boas práticas de marcação, você constrói projetos mais robustos, fáceis de manter e preparados para qualquer dispositivo. Agora que você conhece esses elementos, coloque-os em prática no seu próximo projeto e comprove o quanto a web fica mais poderosa e acessível!</p>
+            </div>
+            <footer class="post-full__footer mt-4">
+                <a href="../blog.html" class="posts__see-all">← Voltar ao blog</a>
+            </footer>
+            </article>
+        </div>
+        </main>
+
+        <footer class="rodape">
+        <div class="container rodape__conteudo">
+            <div class="logo rodape__coluna">
+            <a href="../index.html"
+                ><img
+                src="../img/Logo.png"
+                alt="DTech Developer"
+                class="rodape__logo"
+                loading="lazy"
+                />
+            </a>
+            </div>
+            <div class="rodape__coluna">
+            <h4>Tecnologias que utilizamos</h4>
+            <ul class="tecnologias-utilizadas">
+                <li>Python</li><li>HTML5</li><li>CSS</li><li>JavaScript</li>
+                <li>Git & GitHub</li><li>SASS & Gulp</li><li>React & Vue</li><li>Docker</li>
+                <li>SQL</li><li>Apps Script</li><li>Excel</li><li>Power BI</li>
+            </ul>
+            </div>
+            <div class="rodape__coluna">
+            <h4>&nbsp;</h4>
+            </div>
+        </div>
+        <div class="rodape__copy">
+            <p>&copy; 2025 DTech Developer. Todos os direitos reservados.</p>
+        </div>
+        <a
+            href="https://wa.me/5579981314513"
+            class="whatsapp-fixo"
+            target="_blank"
+            aria-label="Fale conosco no WhatsApp"
+        >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="32"
+            height="32"
+            fill="white"
+            >
+            <path
+                d="M380.9 97.1C339 55.2 283.2 32 224.1 32 100.3 32 0 132.3 0 256c0 45 11.7 88.5 33.8 127.1L2.5 480l101.7-30.9c35 19.2 74.2 29.4 119.9 29.4 123.7 0 224-100.3 224-224 0-59.1-23.2-114.9-65.2-156.9zM224.1 438c-38.4 0-76.3-10.4-109.1-30l-7.8-4.6-60.5 18.4 19.4-59.2-5.1-8.1c-20.2-31.8-30.9-68.2-30.9-106.4 0-105.9 86.1-192 192-192 51.3 0 99.5 20 135.9 56.1S416 204.7 416 256c0 105.9-86.1 182-191.9 182zm101.1-138.2c-5.5-2.8-32.6-16.1-37.6-17.9-5-1.9-8.7-2.8-12.5 2.8-3.7 5.5-14.4 17.9-17.6 21.6-3.2 3.7-6.5 4.2-12 1.4s-23.4-8.6-44.6-27.5c-16.5-14.7-27.6-32.9-30.9-38.4s-.3-8.6 2.4-11.4c2.4-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.2-41.4-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5 5.5-19.6 19.1-19.6 46.6s20.1 54.1 22.9 57.8c2.8 3.7 39.4 60.2 95.5 84.4 13.3 5.7 23.6 9.1 31.7 11.7 13.3 4.2 25.5 3.6 35.1 2.2 10.7-1.6 32.6-13.3 37.2-26.2 4.6-12.9 4.6-23.9 3.2-26.2-1.2-2.2-5-3.6-10.5-6.4z"
+            />
+            </svg>
+        </a>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

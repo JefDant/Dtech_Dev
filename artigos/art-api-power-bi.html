@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Importando Dados de APIs no Power BI: Integrações em Tempo Real – Blog Técnico</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="icon" type="image/png" href="../img/favicon.png" />
+    </head>
+    <body>
+        <header class="header fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+                <div class="container d-flex justify-content-between align-items-center logo">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../img/Logo.png" alt="DTech Developer" class="logo-img" loading="lazy" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="menuNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="../index.html#inicio">Início</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#sobre">Sobre Nós</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#solucoes">Soluções</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#contato">Contato</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="posts blog__pagina" style="padding-top: 100px;">
+            <div class="container padding_top">
+                <h2>Importando Dados de APIs no Power BI: Integrações em Tempo Real</h2>
+                <article class="post-full mt-4">
+                    <header class="post-card__header mb-3">
+                        <div class="post-card__meta">
+                            <time datetime="2025-06-08">8 de junho de 2025</time> • <span>por José Jeferson</span>
+                        </div>
+                    </header>
+                    <div class="post-full__content text-dark">
+                        <p>Integrar dados externos por meio de APIs (Application Programming Interfaces) é fundamental para ampliar a capacidade analítica de um dashboard no Power BI. Em cenários que exigem acompanhamento em tempo real — como monitoramento de métricas de marketing, indicadores financeiros ou dados de IoT — conectar-se diretamente a endpoints da API torna-se indispensável. Neste artigo, você vai aprender:</p>
+                        <ul>
+                            <li><strong>Por que usar APIs no Power BI</strong></li>
+                            <li><strong>Modelos de integração: Import vs. DirectQuery vs. Streaming</strong></li>
+                            <li><strong>Passo a passo: conectando-se a uma API REST</strong></li>
+                            <li><strong>Exemplo prático: consumindo a API pública de clima</strong></li>
+                            <li><strong>Boas práticas e dicas de performance</strong></li>
+                            <li><strong>Considerações finais</strong></li>
+                        </ul>
+
+                        <h3>1. Por que usar APIs no Power BI</h3>
+                        <ul>
+                            <li><strong>Dados sempre atualizados</strong><br/>APIs permitem acesso direto à fonte, sem exportar manualmente planilhas.</li>
+                            <li><strong>Automação completa</strong><br/>Ao agendar a atualização do conjunto de dados, o Power BI busca novas informações automaticamente.</li>
+                            <li><strong>Flexibilidade</strong><br/>Dá para consumir APIs de CRMs, ERPs, plataformas de e-commerce, serviços de dados de mercado etc.</li>
+                        </ul>
+
+                        <h3>2. Modelos de integração</h3>
+                        <table class="table">
+                            <thead>
+                                <tr><th>Modo</th><th>Como funciona</th><th>Vantagens</th><th>Limitações</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Import</strong></td><td>Dados copiados para o modelo interno</td><td>Ótimo desempenho de consulta</td><td>Atualizações periódicas (mínimo 30 min)</td></tr>
+                                <tr><td><strong>DirectQuery</strong></td><td>Consulta em tempo real diretamente na fonte de dados</td><td>Informações sempre frescas</td><td>Latência dependerá da API</td></tr>
+                                <tr><td><strong>Streaming</strong></td><td>Dados em memória atualizados via push API ou Azure Stream Analytics</td><td>Atualização quase instantânea (&lt; 5 s)</td><td>Implementação mais complexa</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h3>3. Passo a passo: conectando-se a uma API REST</h3>
+                        <ol>
+                            <li><strong>Obtenha a URL e as credenciais</strong><br/>Endpoints podem exigir API Key, OAuth ou autenticação básica.</li>
+                            <li><strong>No Power BI Desktop, vá em “Obter Dados” → “Web”</strong></li>
+                            <li><strong>Insira a URL do endpoint</strong><br/>Para parâmetros dinâmicos, defina <em>Parâmetros</em> no editor.</li>
+                            <li><strong>Configure a autenticação</strong><br/>Escolha “Cabeçalhos HTTP personalizados” ou “API Key” conforme necessário.</li>
+                            <li><strong>Transforme a resposta com Power Query (M)</strong><br/>Converta JSON em tabela, expanda colunas e ajuste tipos de dados.</li>
+                            <li><strong>Carregue no modelo e agende atualizações</strong><br/>No serviço do Power BI, configure o gateway (caso a API não seja pública) e defina o agendamento.</li>
+                        </ol>
+
+                        <h3>4. Exemplo prático: consumindo a API pública de clima</h3>
+                        <p><strong>Endpoint</strong><br/><code>https://api.openweathermap.org/data/2.5/weather?q=São+Paulo&appid=SEU_API_KEY&units=metric&lang=pt_br</code></p>
+                        <p><strong>Consulta em Power Query (M)</strong></p>
+                        <pre><code>let
+    Fonte = Json.Document(Web.Contents(
+        "https://api.openweathermap.org/data/2.5/weather",
+        [
+            Query = [
+                q     = "São Paulo",
+                appid = "SEU_API_KEY",
+                units = "metric",
+                lang  = "pt_br"
+            ]
+        ]
+    )),
+    Main      = Fonte[main],
+    Tabela    = Record.ToTable(Main),
+    TipoCerto = Table.TransformColumnTypes(Tabela, {{"Value", type number}})
+in
+    TipoCerto</code></pre>
+                        <p><strong>O que acontece?</strong><br/>- <code>Web.Contents</code> faz a requisição HTTP com parâmetros de query string.<br/>- <code>Json.Document</code> converte o corpo JSON em registro do Power Query.<br/>- <code>Record.ToTable</code> transforma o registro em tabela para facilitar a análise.<br/>- <code>Table.TransformColumnTypes</code> ajusta os tipos de coluna.</p>
+
+                        <h3>5. Boas práticas e dicas de performance</h3>
+                        <ul>
+                            <li><strong>Minimize chamadas</strong><br/>Agrupe múltiplas consultas em um único endpoint, quando possível.</li>
+                            <li><strong>Use parâmetros</strong><br/>Facilita reutilizar etapas para diferentes cidades, datas ou filtros.</li>
+                            <li><strong>Pré-processamento com Dataflow</strong><br/>Crie Dataflows no Power BI Service para pré-carregar e transformar dados, aliviando o gateway.</li>
+                            <li><strong>Respeite limites de API</strong><br/>Verifique o rate limit do provedor e evite bloqueios por excesso de requisições.</li>
+                            <li><strong>Trate erros</strong><br/>Empregue <code>try … otherwise</code> para lidar graciosamente com falhas:<br/><pre><code>let
+    Resultado = try Web.Contents("https://api.exemplo/v1") otherwise null
+in
+    Resultado</code></pre></li>
+                        </ul>
+
+                        <h3>6. Considerações finais</h3>
+                        <p>Integrar APIs ao Power BI eleva seus dashboards a um novo patamar de dinamismo e autonomia. Seja para acompanhar campanhas, operações internas ou sensores IoT, essas técnicas tornam suas visualizações mais precisas e menos dependentes de atualizações manuais.</p>
+                        <p><strong>Próximos passos sugeridos:</strong><br/>- Teste a conexão com uma API simples (como a de clima).<br/>- Avalie DirectQuery se aceitar a latência.<br/>- Considere usar Azure Functions como um proxy para consolidar várias APIs.</p>
+
+                    </div>
+                    <footer class="post-full__footer mt-4">
+                        <a href="../blog.html" class="posts__see-all">← Voltar ao blog</a>
+                    </footer>
+                </article>
+            </div>
+        </main>
+
+        <footer class="rodape">
+        <div class="container rodape__conteudo">
+            <div class="logo rodape__coluna">
+            <a href="../index.html"
+                ><img
+                src="../img/Logo.png"
+                alt="DTech Developer"
+                class="rodape__logo"
+                loading="lazy"
+                />
+            </a>
+            </div>
+            <div class="rodape__coluna">
+            <h4>Tecnologias que utilizamos</h4>
+            <ul class="tecnologias-utilizadas">
+                <li>Python</li><li>HTML5</li><li>CSS</li><li>JavaScript</li>
+                <li>Git & GitHub</li><li>SASS & Gulp</li><li>React & Vue</li><li>Docker</li>
+                <li>SQL</li><li>Apps Script</li><li>Excel</li><li>Power BI</li>
+            </ul>
+            </div>
+            <div class="rodape__coluna">
+            <h4>&nbsp;</h4>
+            </div>
+        </div>
+        <div class="rodape__copy">
+            <p>&copy; 2025 DTech Developer. Todos os direitos reservados.</p>
+        </div>
+        <a
+            href="https://wa.me/5579981314513"
+            class="whatsapp-fixo"
+            target="_blank"
+            aria-label="Fale conosco no WhatsApp"
+        >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            width="32"
+            height="32"
+            fill="white"
+            >
+            <path
+                d="M380.9 97.1C339 55.2 283.2 32 224.1 32 100.3 32 0 132.3 0 256c0 45 11.7 88.5 33.8 127.1L2.5 480l101.7-30.9c35 19.2 74.2 29.4 119.9 29.4 123.7 0 224-100.3 224-224 0-59.1-23.2-114.9-65.2-156.9zM224.1 438c-38.4 0-76.3-10.4-109.1-30l-7.8-4.6-60.5 18.4 19.4-59.2-5.1-8.1c-20.2-31.8-30.9-68.2-30.9-106.4 0-105.9 86.1-192 192-192 51.3 0 99.5 20 135.9 56.1S416 204.7 416 256c0 105.9-86.1 182-191.9 182zm101.1-138.2c-5.5-2.8-32.6-16.1-37.6-17.9-5-1.9-8.7-2.8-12.5 2.8-3.7 5.5-14.4 17.9-17.6 21.6-3.2 3.7-6.5 4.2-12 1.4s-23.4-8.6-44.6-27.5c-16.5-14.7-27.6-32.9-30.9-38.4s-.3-8.6 2.4-11.4c2.4-2.4 5.5-6.5 8.3-9.7 2.8-3.2 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.2-41.4-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5 5.5-19.6 19.1-19.6 46.6s20.1 54.1 22.9 57.8c2.8 3.7 39.4 60.2 95.5 84.4 13.3 5.7 23.6 9.1 31.7 11.7 13.3 4.2 25.5 3.6 35.1 2.2 10.7-1.6 32.6-13.3 37.2-26.2 4.6-12.9 4.6-23.9 3.2-26.2-1.2-2.2-5-3.6-10.5-6.4z"
+            />
+            </svg>
+        </a>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
