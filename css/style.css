@@ -1,0 +1,159 @@
+/* Estilos para páginas de serviços */
+.servico__main {
+    padding: 120px 0 60px;
+    background-color: #f8f9fa;
+}
+
+.servico__main--dark {
+    background: #181c23 !important;
+}
+
+.servico__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.servico__title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.servico__content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.servico__section {
+    margin-bottom: 3rem;
+}
+
+.servico__section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.servico__section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.servico__features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.servico__feature {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.servico__feature:hover {
+    transform: translateY(-5px);
+}
+
+.servico__feature i {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 1rem;
+}
+
+.servico__feature h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.servico__feature p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.servico__tech-list,
+.servico__benefits {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.servico__tech-list li,
+.servico__benefits li {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.servico__cta {
+    text-align: center;
+    padding: 3rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 3rem;
+}
+
+.servico__cta h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.servico__cta p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.servico__cta .btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .servico__main {
+        padding: 100px 0 40px;
+    }
+
+    .servico__title {
+        font-size: 2rem;
+    }
+
+    .servico__section h2 {
+        font-size: 1.5rem;
+    }
+
+    .servico__features {
+        grid-template-columns: 1fr;
+    }
+
+    .servico__tech-list,
+    .servico__benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .servico__cta {
+        padding: 2rem;
+    }
+
+    .servico__cta h2 {
+        font-size: 1.5rem;
+    }
+} 
